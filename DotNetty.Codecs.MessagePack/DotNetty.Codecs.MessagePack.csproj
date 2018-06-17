@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="NuGet">
+    <TargetFrameworks>netstandard1.6;net45</TargetFrameworks>
+    <IsPackable>true</IsPackable>
+    <PackageId>DotNetty.Codecs.MessagePack</PackageId>
+    <Description>MessagePack codec for DotNetty</Description>
+    <AssemblyTitle>DotNetty: MessagePack codec</AssemblyTitle>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <VersionPrefix>0.4.8</VersionPrefix>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>DotNetty.Codecs.MessagePack</AssemblyName>
+    <PackageTags>socket;tcp;protocol;netty;dotnetty;network;messagepack</PackageTags>
+    <PackageProjectUrl>https://github.com/TheAifam5/DotNetty.Codecs.MessagePack</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/TheAifam5/DotNetty.Codecs.MessagePack/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <RequireLicenseAcceptance>true</RequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/TheAifam5/DotNetty.Codecs.MessagePack</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNetty.Buffers" Version="0.4.8" />
+    <PackageReference Include="DotNetty.Codecs" Version="0.4.8" />
+    <PackageReference Include="DotNetty.Common" Version="0.4.8" />
+    <PackageReference Include="DotNetty.Transport" Version="0.4.8" />
+    <PackageReference Include="MessagePack" Version="1.7.3.4" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <PackageReference Include="System.Diagnostics.Contracts" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+</Project>
